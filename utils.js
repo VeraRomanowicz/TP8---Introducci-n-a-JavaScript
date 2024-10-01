@@ -1,25 +1,23 @@
 // EJERCICIO 1 //
+
 function calcularEdad (fecha) 
 {
-    const hoy = new Date();
     const cumple = new Date(fecha);
-    let edad;
-     
-    if (hoy.getMonth() > cumple.getMonth)
-    {
-        edad = hoy.getFullYear() - cumple.getFullYear();
+    const hoy = new Date();
+    
+    let edad = hoy.getFullYear() - cumple.getFullYear();
+    const mesNacimiento = cumple.getMonth();
+    const mesActual = hoy.getMonth();
+
+    // Si el cumpleaños de este año aún no ha ocurrido, restamos un año
+    if (mesActual < mesNacimiento || (mesActual === mesNacimiento && hoy.getDate() < cumple.getDate())) {
+        edad--;
     }
-    else if (hoy.getMonth() == cumple.getMonth && hoy.getDay>=cumple.getDay)
-    {
-        edad = hoy.getFullYear() - cumple.getFullYear();
-    }
-    else
-    {
-        edad = hoy.getFullYear() - cumple.getFullYear() -1;
-    }
+
 
     return edad;
 }
+
 
 /*Ejercicio 2*/
 
@@ -37,13 +35,12 @@ function Tirandofruta(fruta)
 
 function ComparandoDatosYtipos()
 {
-    console.log(10 == '10');
+    /* A */ console.log(10 == '10');
     console.log(10 === '10');
-    /*¿Qué diferencias encontrás?
-    La diferencia es que == devuelve true ya que los valores son los mismos. 
-    === compara los tipos de datos y al ser distintos devuelve false*/
-    //C. ¿De qué tipo de dato es 10.6? es un number.
-    console.log(true == 1); //true es igual a 1 al usar la comparación no estricta (==).
-    console.log(true === 1); //true no es igual a 1 al usar la comparación estricta (===). Ya que true es un booleano y 1 es un número.
+    /* B - ¿Qué diferencias encontrás?
+        La diferencia es que == devuelve true ya que los valores son los mismos. === compara los tipos de datos y al ser distintos devuelve false*/
+    /* C - ¿De qué tipo de dato es 10.6? Es un number. */
+    /* D */ console.log(true == 1); //true es igual a 1 al usar la comparación no estricta (==).
+            console.log(true === 1); //true no es igual a 1 al usar la comparación estricta (===). Ya que true es un booleano y 1 es un número.
 
 }
