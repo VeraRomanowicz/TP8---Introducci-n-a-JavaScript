@@ -1,8 +1,9 @@
+const parrafo = document.getElementById("resultado");
+
 /*
 // EJERCICIO 1//
 function devolverEdad () 
 {
-    const parrafo = document.getElementById("resultado");
 
     let respuesta = prompt("Ingresa tu fechad de nacimiento (YYYY-MM-DD):");
     let edad=calcularEdad(respuesta);
@@ -64,38 +65,98 @@ mostrarInfo (ciudad);
 
 // EJERCICIO 5 //
 
-const lista1 = [1, 2, 3, 4, 5, 6, 7];
-
-function duplicarArray (lista1)
+function ejercicio5 () 
 {
-    const lista2 = lista1.map (function(num) { return num*2;});
-    
-    return lista2;
-}
+    const lista1 = [1, 2, 3, 4, 5, 6, 7];
 
-const lista2= duplicarArray(lista1);
-console.log(lista2);
+    function duplicarArray (lista1)
+    {
+        const lista2 = lista1.map (function(num) { return num*2;});
+        
+        return lista2;
+    }
+
+    const lista2= duplicarArray(lista1);
+    console.log(lista2);
+}
+ejercicio5();
 
 
 
 // EJERCICIO 6 //
 
-for (let i=1; i<=4; i++)
+function ejercicio6 () 
 {
-    console.log("*".repeat(i));
-}
+    for (let i=1; i<=4; i++)
+    {
+        console.log("*".repeat(i));
+    }
 
-for (let i=1; i<=5; i++)
-{
-    const lineas= ("-".repeat(5-i));
-    const asteriscos= ("*".repeat(i*2+1));
+    for (let i=1; i<=5; i++)
+    {
+        const lineas= ("-".repeat(5-i));
+        const asteriscos= ("*".repeat(i*2+1));
 
-    console.log(lineas + asteriscos + lineas);
+        console.log(lineas + asteriscos + lineas);
+    }
 }
-*/
+ejercicio6();
 
 
 
 // EJERCICIO 7 //
-const parrafo = document.getElementById("resultado");
-parrafo.innerHTML = "Ingrese una lista de nombres separados por una coma (ej: pepe,lola,juana)" + edad;
+
+function ejercicio7 () 
+{
+    let respuesta = prompt("Ingrese una lista de nombres separados por una coma (ej: pepe,lola,juana)");
+    let palabrasA = nombresConA(respuesta);
+
+    if (palabrasA.length!==0)
+    {
+        parrafo.innerHTML = palabrasA;
+    }
+}
+ejercicio7();
+
+
+
+// EJERCICIO 8 //
+
+function ejercicio8 () 
+{
+    let txt1 = prompt("Ingrese una cadena de texto a modificar");
+    let palabra1 = prompt("Ingrese una palabra que desea reemplazar");
+    let palabra2 = prompt("Ingrese la palabra de reemplazo");
+    let txt2 = remplazarPalabra (txt1, palabra1, palabra2);
+
+    parrafo.innerHTML = "Tu nuevo texto: " + txt2;
+}
+ejercicio8();
+
+
+
+// EJERCICIO 9 //
+
+function ejercicio9 () 
+{
+    let txt = prompt("Ingrese una cadena de texto a modificar");
+    let caracteres = prompt("Ingrese el número de caracteres");
+
+
+    parrafo.innerHTML = "Tu nuevo texto: " + txt.slice(0, caracteres);
+}
+ejercicio9();
+
+*/
+
+
+
+
+// EJERCICIO 10 //
+
+function ejercicio10 () 
+{
+    let txt = prompt("Ingrese una lista de nombres palabras por una coma (ej: pepe,lola,juana)");
+    parrafo.innerHTML = "Tu nuevo texto: " + txt.replaceAll(",", "-");
+}
+ejercicio10();

@@ -44,3 +44,32 @@ function ComparandoDatosYtipos()
             console.log(true === 1); //true no es igual a 1 al usar la comparación estricta (===). Ya que true es un booleano y 1 es un número.
 
 }
+
+
+/* EJERCICIO 7 */
+
+function nombresConA (respuesta)
+{
+    respuesta= respuesta.split(",");
+
+    let arrayPalabrasA=[];
+
+    for (const palabra of respuesta) 
+    {
+        if (palabra.startsWith("a"))
+        {arrayPalabrasA.push(palabra)}
+    }
+
+    return arrayPalabrasA;
+}
+
+
+
+/* EJERCICIO 8 */
+ 
+function remplazarPalabra (txt1, palabra1, palabra2)
+{
+    let txt2;
+    txt2 = txt1.replaceAll (palabra1, palabra2);
+    return txt2;
+}
