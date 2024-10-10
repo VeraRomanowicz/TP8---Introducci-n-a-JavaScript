@@ -147,9 +147,6 @@ function ejercicio9 ()
 }
 ejercicio9();
 
-*/
-
-
 
 
 // EJERCICIO 10 //
@@ -160,3 +157,25 @@ function ejercicio10 ()
     parrafo.innerHTML = "Tu nuevo texto: " + txt.replaceAll(",", "-");
 }
 ejercicio10();
+*/
+
+
+// EJERCICIO 11 //
+
+function ejercicio11 () 
+{
+    let txt = prompt("Ingrese una lista de objetos pedidos junto con sus respectivos totales, separados por coma. Cada pedido se debe ingresar en el formato 'nombre:total, nombre:total'.");
+    
+    let txtDividido= txt.split(",");
+    let suma=0;
+    for (const palabra of txtDividido)
+    {
+        let linea =palabra.split(":");
+        let precio = linea[1];
+        console.log(precio);
+        suma+=parseFloat(precio);
+    }
+
+    parrafo.innerHTML = "Tu total es de: " + suma;
+}
+ejercicio11();
