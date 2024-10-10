@@ -1,6 +1,6 @@
 const parrafo = document.getElementById("resultado");
 
-/*
+
 // EJERCICIO 1//
 function devolverEdad () 
 {
@@ -157,7 +157,7 @@ function ejercicio10 ()
     parrafo.innerHTML = "Tu nuevo texto: " + txt.replaceAll(",", "-");
 }
 ejercicio10();
-*/
+
 
 
 // EJERCICIO 11 //
